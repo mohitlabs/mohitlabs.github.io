@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    {% include navbar.html %}
+    <br><br><br><br><br><br>
+    <div class="input-group mb-3 container">
+        <input type="text" class="form-control search-input-custom" placeholder="Search Something"
+            aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-outline-secondary search-custom" type="button" id="button-addon2">
+            <span class="material-icons">
+                search
+            </span>
+        </button>
+    </div>
+    <br><br><br>
+    <h1>{{page.title}}</h1>
+    {% include footer.html %}
+</body>
+
+</html>
