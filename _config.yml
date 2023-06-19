@@ -32,9 +32,6 @@ github_username:  mohitlabs
 # Build settings
 plugins:
   - jekyll-feed
-jekyll_admin:
-  enabled: true
-  baseurl: "/admin"
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
