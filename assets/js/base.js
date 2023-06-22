@@ -1,21 +1,23 @@
 // Toggle between dark and light modes
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleThemeBtn = document.getElementById("toggle-theme-btn");
-    const dark = document.getElementById("moon-icon");
-    const light = document.getElementById("sun-icon");
-
-    let darkTheme = false;
-    light.style.display = "none";
+    let toggleThemeBtn = document.querySelector("header #toggle-theme-btn");
+    let dark = document.querySelector("#moon-icon");
+    let light = document.querySelector("#sun-icon");
+    let darkTheme = null;
 
     // Check if a theme preference is already set
-    const themePreference = localStorage.getItem("theme");
+    let themePreference = localStorage.getItem("theme");
     if (themePreference === "dark") {
-        document.body.classList.remove("theme-light");
         document.body.classList.add("theme-dark");
         darkTheme = true;
         // Change the icons visibility of toggle theme button
         dark.style.display = "none";
         light.style.display = "block";
+    } else {
+        document.body.classList.add("theme-light");
+        // Change the icons visibility of toggle theme button
+        dark.style.display = "block";
+        light.style.display = "none";
     }
 
     // Listen for clicks on the toggle theme button
@@ -30,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
             dark.style.display = "block";
             light.style.display = "none";
             darkTheme = false;
-        }
-        else {
+            toggleThemeBtn.title = "Toggle Dark Mode";
+            toggleThemeBtn.ariaLabel = "Toggle Dark Mode";
+        } else {
             // Add the 'dark-theme' class to the body element
             document.body.classList.remove("theme-light");
             document.body.classList.add("theme-dark");
@@ -40,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
             dark.style.display = "none";
             light.style.display = "block";
             darkTheme = true;
+            toggleThemeBtn.title = "Toggle Light Mode";
+            toggleThemeBtn.ariaLabel = "Toggle Light Mode";
         }
     });
 });

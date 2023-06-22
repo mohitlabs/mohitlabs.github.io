@@ -5,13 +5,19 @@
 
 <body>
 
-    <main id="app-root">
+    <main id="app-root" class="px-5">
         {%- include header.html -%}
 
         {%- include navbar.html -%}
 
-        <div class="page-content">
-            {{ content }}
+        <div class="tab-content">
+            <div class="tab-pane fade active show" id="projects-page" role="tabpanel"
+                aria-labelledby="nav-research-page">
+                {{ content }}</div>
+            <div class="tab-pane fade" id="research-page" role="tabpanel" aria-labelledby="nav-research-page">B</div>
+            <div class="tab-pane fade" id="blog-page" role="tabpanel" aria-labelledby="nav-research-page">C</div>
+            <div class="tab-pane fade" id="appointment-page" role="tabpanel" aria-labelledby="nav-research-page">D</div>
+            <div class="tab-pane fade" id="about-page" role="tabpanel" aria-labelledby="nav-research-page">E</div>
         </div>
 
         {%- include footer.html -%}

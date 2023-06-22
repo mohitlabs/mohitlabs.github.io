@@ -6,14 +6,41 @@
 
 #app-root {
     @include themify($themes) {
-        background-color: themed("PrimaryVariant");
+        background-color: themed("Primary");
     }
     font-family: "Nanum Pen Script", cursive;
     font-size: larger;
-    height: 500px;
 }
 
-ul li a:hover {
+header {
+    @include themify($themes) {
+        background-color: themed("PrimaryVariant");
+    }
+}
+
+header a strong {
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+header .input-group {
+    width: 20%;
+}
+
+ul {
+    @include themify($themes) {
+        background-color: themed("PrimaryVariant");
+    }
+}
+
+ul li {
+    @include themify($themes) {
+        color: themed("OnSecondary");
+    }
+    cursor: pointer;
+}
+
+ul li:hover {
     @include themify($themes) {
         color: themed("SecondaryVariant") !important;
     }
@@ -40,23 +67,16 @@ ul li a:hover {
         background-color: themed("SecondaryVariant");
         border-color: themed("OnSecondary");
     }
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
 }
 
-.navBar button {
+nav ul .active {
     @include themify($themes) {
-        color: themed("OnPrimary");
+        background-color: themed("SecondaryVariant");
+    }
+}
+
+footer {
+    @include themify($themes) {
         background-color: themed("PrimaryVariant");
     }
-    border: 1px solid;
-    text-transform: uppercase;
-}
-
-.navBar button:hover {
-    @include themify($themes) {
-        color: themed("OnSecondary");
-        background-color: themed("SecondaryVariant");
-        border-color: themed("OnSecondary");
-    }
-    transition-duration: 300ms;
 }
