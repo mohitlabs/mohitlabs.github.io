@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2023-06-18 23:18:10 +0530
-categories: jekyll update
+title:  "Create a static website using jekyll"
+date:   2021-06-18 23:18:10 +0530
+categories: blog technical
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

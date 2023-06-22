@@ -1,0 +1,45 @@
+@import "typography";
+@import "colors";
+
+$themes: (
+    dark: (
+        Primary: #262626,
+        OnPrimary: #ffffff,
+        PrimaryVariant: #000000,
+        Secondary: #ff5436,
+        OnSecondary: #442925,
+        SecondaryVariant: #ff0000,
+    ),
+    light: (
+        Primary: #c00100,
+        OnPrimary: #ffffff,
+        PrimaryVariant: #000000,
+        Secondary: #775651,
+        OnSecondary: #ffffff,
+        SecondaryVariant: #000000,
+    ),
+);
+
+@mixin themify($themes: $themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
