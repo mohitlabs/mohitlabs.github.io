@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Necessity of breaking the belief system of AI in Human V/S AI war"
+title:  "Non Programmable Neural Networks For Machine Unconcious Design"
 date:   2023-06-24 14:02:35 +0530
 categories: blog misc
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Create a static website using jekyll"
-date:   2021-06-18 23:18:10 +0530
+title:  "Create a Single Page Static Web Application by using Vue and Jekyll"
+date:   2021-06-19 20:10:10 +0530
 categories: blog technical
 author: Mohit Singh
 ---
