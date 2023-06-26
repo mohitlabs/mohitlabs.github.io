@@ -6,108 +6,85 @@
 
 #app-root {
     @include themify($themes) {
-        background-color: themed("Primary");
+        background-color: themed("Background");
+        font-family: themed("FontFamily");
+        font-weight: themed("FontWeight");
+        font-size: themed("FontSize");
     }
-    font-family: "Nanum Pen Script", cursive;
-    font-size: larger;
 }
 
 header {
-    @include themify($themes) {
-        background-color: themed("PrimaryVariant");
-    }
+    background-color: $Primary;
 }
 
 header a strong {
+    color: $OnSurface;
     text-transform: uppercase;
     font-size: larger;
 }
 
-header a:hover {
-    @include themify($themes) {
-        text-shadow: 3px 3px 3px themed("SecondaryVariant");
-    }
-    scale: 1.2;
+header form .form-control {
+    background-color: $Primary;
+    color: $Surface;
+    border-color: $Surface;
 }
 
-header .input-group {
-    width: 20%;
+header form .form-control::placeholder {
+    color: $Surface;
 }
 
-aside {
-    @include themify($themes) {
-        background-color: themed("PrimaryVariant");
-    }
-}
-
-ul li {
-    @include themify($themes) {
-        background-color: themed("PrimaryVariant");
-    }
-}
-
-ul li a {
-    @include themify($themes) {
-        color: themed("OnSecondary");
-    }
-    cursor: pointer;
-}
-
-ul li a:hover {
-    @include themify($themes) {
-        color: themed("SecondaryVariant") !important;
-    }
+header form .form-control:hover {
+    transition-property: background-color;
     transition-duration: 300ms;
+    background-color: $PrimaryVariant;
 }
 
-.form-control::placeholder {
-    @include themify($themes) {
-        color: themed("OnPrimary");
-    }
+header form .form-control:focus {
+    background-color: $PrimaryVariant;
+    color: $Surface;
+    border-color: $Surface;
 }
 
-.form-control {
-    @include themify($themes) {
-        color: themed("OnPrimary");
-        background-color: themed("PrimaryVariant");
-        border-color: themed("OnPrimary");
-    }
+header form .btn {
+    color: $Surface;
 }
 
-.form-control:focus {
-    @include themify($themes) {
-        color: themed("OnSecondary");
-        background-color: themed("SecondaryVariant");
-        border-color: themed("OnSecondary");
-    }
+header form .btn:hover {
+    transition-duration: 300ms;
+    background-color: $PrimaryVariant;
+    color: $Surface;
+}
+
+header div .btn {
+    color: $Surface;
+}
+
+header div .btn:hover {
+    transition-duration: 300ms;
+    color: $Surface;
+}
+
+header div .btn:focus {
+    border: none;
+}
+
+nav ul li {
+    background-color: $Primary;
+}
+
+nav ul li:hover {
+    transition-duration: 300ms;
+    background-color: $PrimaryVariant;
 }
 
 nav ul .active {
-    @include themify($themes) {
-        background-color: themed("SecondaryVariant");
-    }
+    background-color: $PrimaryVariant;
 }
 
-.card {
-    @include themify($themes) {
-        background-color: themed("SecondaryVariant");
-    }
+nav ul li a {
+    color: $Surface !important;
 }
 
 footer {
-    @include themify($themes) {
-        background-color: themed("PrimaryVariant");
-    }
-}
-
-.carousel-inner {
-    height: 400px;
-}
-
-.carousel-indicators {
-    margin-bottom: 2rem;
-}
-
-.carousel-caption {
-    margin-bottom: 7rem;
+    background-color: $Primary;
 }

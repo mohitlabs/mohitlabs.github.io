@@ -1,1 +1,43 @@
-@import "base";
+---
+# sass integration in jekyll
+---
+
+@import "themes";
+
+.carousel-inner {
+    height: 400px;
+}
+
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.carousel-caption {
+    margin-bottom: 7rem;
+}
+
+section .card-header {
+    background-color: $Primary;
+    color: $Surface;
+}
+
+section .card-body {
+    @include themify($themes) {
+        background-color: themed("OnBackground");
+        color: themed("OnSurface");
+    }
+}
+
+section .row .card-body {
+    @include themify($themes) {
+        background-color: themed("Background");
+        color: themed("Surface");
+    }
+}
+
+section .row .card-body .btn {
+    @include themify($themes) {
+        background-color: themed("OnBackground");
+        color: themed("OnSurface");
+    }
+}

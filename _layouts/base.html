@@ -10,26 +10,30 @@
         <!-- Header -->
         {%- include header.html -%}
 
+        <!-- Navigation Bar -->
+        {%- include navbar.html -%}
+
         <div class="row">
 
             <!-- Left Sidebar -->
-            <aside class="d-flex col-lg-2">
+            <aside class="d-none d-lg-flex col-lg-2">
+                <p class="px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quia eos ipsam
+                    laudantium perferendis, voluptatem aut molestiae consectetur excepturi! Eos!</p>
             </aside>
 
             <div class="col-lg-8 px-4">
 
-                <!-- Navigation Bar -->
-                {%- include navbar.html -%}
-
-                <!-- Main Content -->
-                <div class="tab-content">
+                <!-- Page Content -->
+                <div class="page-content">
                     {{ content }}
                 </div>
 
             </div>
 
             <!-- Right Sidebar -->
-            <aside class="d-flex col-lg-2">
+            <aside class="d-none d-lg-flex col-lg-2">
+                <p class="px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quia eos ipsam
+                    laudantium perferendis, voluptatem aut molestiae consectetur excepturi! Eos!</p>
             </aside>
 
         </div>

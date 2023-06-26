@@ -9,15 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let themePreference = localStorage.getItem("theme");
     if (themePreference === "dark") {
         document.body.classList.add("theme-dark");
-        darkTheme = true;
         // Change the icons visibility of toggle theme button
         dark.style.display = "none";
         light.style.display = "block";
+        toggleThemeBtn.title = "Toggle Light Mode";
+        toggleThemeBtn.ariaLabel = "Toggle Light Mode";
+        darkTheme = true;
     } else {
         document.body.classList.add("theme-light");
         // Change the icons visibility of toggle theme button
         dark.style.display = "block";
         light.style.display = "none";
+        toggleThemeBtn.title = "Toggle Dark Mode";
+        toggleThemeBtn.ariaLabel = "Toggle Dark Mode";
     }
 
     // Listen for clicks on the toggle theme button
@@ -31,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // Change the icons visibility of toggle theme button
             dark.style.display = "block";
             light.style.display = "none";
-            darkTheme = false;
             toggleThemeBtn.title = "Toggle Dark Mode";
             toggleThemeBtn.ariaLabel = "Toggle Dark Mode";
+            darkTheme = false;
         } else {
             // Add the 'dark-theme' class to the body element
             document.body.classList.remove("theme-light");
@@ -42,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // Change the icons visibility of toggle theme button
             dark.style.display = "none";
             light.style.display = "block";
-            darkTheme = true;
             toggleThemeBtn.title = "Toggle Light Mode";
             toggleThemeBtn.ariaLabel = "Toggle Light Mode";
+            darkTheme = true;
         }
     });
 });

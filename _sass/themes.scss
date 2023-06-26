@@ -3,20 +3,22 @@
 
 $themes: (
     dark: (
-        Primary: #262626,
-        OnPrimary: #ffffff,
-        PrimaryVariant: #000000,
-        Secondary: #ff5436,
-        OnSecondary: #442925,
-        SecondaryVariant: #ff0000,
+        Background: $Background,
+        OnBackground: $OnBackground,
+        Surface: $Surface,
+        OnSurface: $OnSurface,
+        FontFamily: $FontFamily,
+        FontWeight: $FontWeight,
+        FontSize: $FontSize,
     ),
     light: (
-        Primary: #ff5436,
-        OnPrimary: #442925,
-        PrimaryVariant: #ff0000,
-        Secondary: #262626,
-        OnSecondary: #ffffff,
-        SecondaryVariant: #000000,
+        Background: $Surface,
+        OnBackground: $OnSurface,
+        Surface: $Background,
+        OnSurface: $OnBackground,
+        FontFamily: $FontFamily,
+        FontWeight: $FontWeight,
+        FontSize: $FontSize,
     ),
 );
 
