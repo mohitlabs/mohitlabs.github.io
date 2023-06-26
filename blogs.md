@@ -2,4 +2,4 @@
 layout: page
 ---
 
-Blogs Content
+Recent Blogs

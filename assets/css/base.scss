@@ -23,11 +23,18 @@ header a strong {
     font-size: larger;
 }
 
+header a:hover {
+    @include themify($themes) {
+        text-shadow: 3px 3px 3px themed("SecondaryVariant");
+    }
+    scale: 1.2;
+}
+
 header .input-group {
     width: 20%;
 }
 
-ul {
+aside {
     @include themify($themes) {
         background-color: themed("PrimaryVariant");
     }
@@ -35,12 +42,18 @@ ul {
 
 ul li {
     @include themify($themes) {
+        background-color: themed("PrimaryVariant");
+    }
+}
+
+ul li a {
+    @include themify($themes) {
         color: themed("OnSecondary");
     }
     cursor: pointer;
 }
 
-ul li:hover {
+ul li a:hover {
     @include themify($themes) {
         color: themed("SecondaryVariant") !important;
     }
@@ -75,8 +88,26 @@ nav ul .active {
     }
 }
 
+.card {
+    @include themify($themes) {
+        background-color: themed("SecondaryVariant");
+    }
+}
+
 footer {
     @include themify($themes) {
         background-color: themed("PrimaryVariant");
     }
+}
+
+.carousel-inner {
+    height: 400px;
+}
+
+.carousel-indicators {
+    margin-bottom: 2rem;
+}
+
+.carousel-caption {
+    margin-bottom: 7rem;
 }

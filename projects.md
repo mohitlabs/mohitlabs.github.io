@@ -2,6 +2,7 @@
 layout: page
 ---
 
+Recent Projects
 Projects I've Done
 Microcontrollers & Embedded Systems
 Web Development
