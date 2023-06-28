@@ -4,15 +4,6 @@
 
 @import "themes";
 
-#app-root {
-    @include themify($themes) {
-        background-color: themed("Background");
-        font-family: themed("FontFamily");
-        font-weight: themed("FontWeight");
-        font-size: themed("FontSize");
-    }
-}
-
 header {
     background-color: $Primary;
 }
@@ -55,17 +46,24 @@ header form .btn:hover {
     color: $Surface;
 }
 
-header div .btn {
+header .toggle-theme-icon {
     color: $Surface;
 }
 
-header div .btn:hover {
-    transition-duration: 300ms;
-    color: $Surface;
+#moon-icon {
+    display: block;
 }
 
-header div .btn:focus {
-    border: none;
+#sun-icon {
+    display: none;
+}
+
+#toggle-theme-checkbox:checked ~ #moon-icon {
+    display: none;
+}
+
+#toggle-theme-checkbox:checked ~ #sun-icon {
+    display: block;
 }
 
 nav ul li {

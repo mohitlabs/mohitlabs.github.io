@@ -1,21 +1,26 @@
-<header class="d-flex flex-wrap mb-4">
-    <a href="/" class="flex-fill d-flex align-items-center justify-content-center text-decoration-none py-3">
-        <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="MohitLabs Logo">
-            <use xlink:href="/" />
-        </svg> -->
-        <strong>MOHITLABS</strong>
-    </a>
+<header class="d-flex row mb-4">
+    <div class="col-10 order-1 col-md-2 order-md-1 d-flex align-items-center justify-content-center py-3">
+        <a href="/" class="ms-5 ms-md-0 text-decoration-none">
+            <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="MohitLabs Logo">
+                <use xlink:href="/" />
+            </svg> -->
+            <strong>MOHITLABS</strong>
+        </a>
+    </div>
 
-    <form class="flex-fill d-flex align-items-center justify-content-center text-end input-group py-3 w-50 mx-5">
+    <form
+        class="col-12 order-3 col-md-8 order-md-2 flex-fill d-flex align-items-center justify-content-center input-group px-4 py-3 w-auto">
         <input type="search" class="form-control rounded-0" placeholder="SEARCH SOMETHING..."
             aria-label="SEARCH SOMETHING..." aria-describedby="">
         <button type="button" class="btn input-group-append border rounded-0"><i class="bi bi-search"></i></button>
     </form>
 
-    <div class="flex-fill d-flex align-items-center justify-content-center py-3">
-        <button id="toggle-theme-btn" class="btn mx-4" title="" aria-label="">
+    <div class="col-2 order-2 col-md-2 order-md-3 d-flex align-items-center justify-content-center py-3">
+        <span class="toggle-theme-icon position-relative">
+            <input type="checkbox" id="toggle-theme-checkbox" class="position-absolute w-100 h-100 opacity-0"
+                role="button">
             <i id="moon-icon" class="bi bi-moon-stars"></i>
             <i id="sun-icon" class="bi bi-sun"></i>
-        </button>
+        </span>
     </div>
 </header>

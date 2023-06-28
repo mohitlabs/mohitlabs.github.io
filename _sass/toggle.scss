@@ -1,0 +1,10 @@
+@import "themes";
+
+#app-root {
+    transition-property: background-color !important;
+    transition: 1s;
+    background-color: themed("Background");
+    font-family: themed("FontFamily");
+    font-weight: themed("FontWeight");
+    font-size: themed("FontSize");
+}

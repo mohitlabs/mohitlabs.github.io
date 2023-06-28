@@ -21,23 +21,23 @@ section .card-header {
     color: $Surface;
 }
 
-section .card-body {
-    @include themify($themes) {
-        background-color: themed("OnBackground");
-        color: themed("OnSurface");
-    }
-}
+// section .card-body {
+//     @include themify($themes) {
+//         background-color: themed("OnBackground");
+//         color: themed("OnSurface");
+//     }
+// }
 
-section .row .card-body {
-    @include themify($themes) {
-        background-color: themed("Background");
-        color: themed("Surface");
-    }
-}
+// section .row .card-body {
+//     @include themify($themes) {
+//         background-color: themed("Background");
+//         color: themed("Surface");
+//     }
+// }
 
-section .row .card-body .btn {
-    @include themify($themes) {
-        background-color: themed("OnBackground");
-        color: themed("OnSurface");
-    }
-}
+// section .row .card-body .btn {
+//     @include themify($themes) {
+//         background-color: themed("OnBackground");
+//         color: themed("OnSurface");
+//     }
+// }
