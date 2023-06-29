@@ -4,12 +4,19 @@ let toggleThemeCheckbox = document.querySelector("#toggle-theme-checkbox");
 
 if (!document.getElementById("theme-stylesheet")) {
     // Create and append the preload link element
-    let preloadLinkElement = document.createElement("link");
-    preloadLinkElement.rel = "preload";
-    preloadLinkElement.href = "/assets/css/" + themePreference + ".css";
-    preloadLinkElement.as = "style";
+    let preloadLinkDark = document.createElement("link");
+    preloadLinkDark.rel = "preload";
+    preloadLinkDark.href = "/assets/css/dark.css";
+    preloadLinkDark.as = "style";
 
-    document.head.appendChild(preloadLinkElement);
+    document.head.appendChild(preloadLinkDark);
+
+    let preloadLinkLight = document.createElement("link");
+    preloadLinkLight.rel = "preload";
+    preloadLinkLight.href = "/assets/css/light.css";
+    preloadLinkLight.as = "style";
+
+    document.head.appendChild(preloadLinkLight);
 
     // Create a link element
     let linkElement = document.createElement("link");
