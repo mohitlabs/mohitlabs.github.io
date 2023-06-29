@@ -1,0 +1,44 @@
+@import "themes";
+
+#app-root {
+    transition-property: background-color !important;
+    transition: 1s;
+    background-color: themed("Background");
+    font-family: themed("FontFamily");
+    font-weight: themed("FontWeight");
+    font-size: themed("FontSize");
+}
+
+a,
+i,
+span,
+.form-control::placeholder,
+.card-header {
+    color: themed("OnBackground") !important;
+}
+
+.form-control,
+.form-control:focus {
+    color: themed("OnBackground");
+    border-color: themed("OnBackground");
+}
+
+.btn {
+    border-color: themed("OnBackground") !important;
+}
+
+.card-body {
+    background-color: themed("OnBackground");
+    color: themed("OnSurface");
+}
+
+section .row .card-body {
+    background-color: themed("Background");
+    color: themed("Surface");
+}
+
+section .row .card-body .btn {
+    background-color: themed("OnBackground");
+    color: themed("OnSurface") !important;
+    border-color: themed("OnSurface") !important;
+}

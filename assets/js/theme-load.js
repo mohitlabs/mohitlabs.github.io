@@ -32,6 +32,9 @@ if (!document.getElementById("theme-stylesheet")) {
 
 // Wait for DOM content load
 document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("theme-stylesheet").onload = () => {
+        document.getElementById("app-root").classList.remove("d-none");
+    }
     if (themePreference === "dark") {
         toggleThemeCheckbox.checked = true;
         toggleThemeCheckbox.title = "Toggle Light Mode";

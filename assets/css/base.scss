@@ -1,7 +1,3 @@
----
-# sass integration in jekyll
----
-
 @import "themes";
 
 header {
@@ -9,19 +5,12 @@ header {
 }
 
 header a strong {
-    color: $OnSurface;
     text-transform: uppercase;
     font-size: larger;
 }
 
 header form .form-control {
     background-color: $Primary;
-    color: $Surface;
-    border-color: $Surface;
-}
-
-header form .form-control::placeholder {
-    color: $Surface;
 }
 
 header form .form-control:hover {
@@ -32,22 +21,11 @@ header form .form-control:hover {
 
 header form .form-control:focus {
     background-color: $PrimaryVariant;
-    color: $Surface;
-    border-color: $Surface;
-}
-
-header form .btn {
-    color: $Surface;
 }
 
 header form .btn:hover {
     transition-duration: 300ms;
     background-color: $PrimaryVariant;
-    color: $Surface;
-}
-
-header .toggle-theme-icon {
-    color: $Surface;
 }
 
 #moon-icon {
@@ -77,10 +55,6 @@ nav ul li:hover {
 
 nav ul .active {
     background-color: $PrimaryVariant;
-}
-
-nav ul li a {
-    color: $Surface !important;
 }
 
 footer {
