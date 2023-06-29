@@ -1,17 +1,15 @@
 // Get the user's theme preference from the browser's local storage
 const themePreference = localStorage.getItem("theme");
 
-if (!document.getElementById("theme-stylesheet")) {
-    // Check if user preference is stored in localStorage
-    if (themePreference) {
-        setTheme(themePreference);
+// Check if user preference is stored in localStorage
+if (themePreference) {
+    setTheme(themePreference);
+} else {
+    // By default, use the system preference
+    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        setTheme("light");
     } else {
-        // By default, use the system preference
-        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-            setTheme("light");
-        } else {
-            setTheme("dark");
-        }
+        setTheme("dark");
     }
 }
 
@@ -31,6 +29,7 @@ function setTheme(mode) {
 
 // Wait for DOM content load
 document.addEventListener("DOMContentLoaded", () => {
+    // Access toggle theme checkbox
     let toggleThemeCheckbox = document.querySelector("#toggle-theme-checkbox");
 
     if (localStorage.getItem("theme") === "dark") {
