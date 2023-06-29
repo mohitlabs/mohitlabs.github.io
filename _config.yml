@@ -31,10 +31,10 @@ url: "https://mohitlabs.github.io" # the base hostname & protocol for your site,
 twitter_username: mohitlabs
 github_username:  mohitlabs
 
-# # Build settings
-# plugins:
-#   - jekyll-feed
-#   - jekyll-seo-tag
+# Build settings
+plugins:
+  - jekyll-feed
+  # - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
