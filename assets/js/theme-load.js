@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleThemeCheckbox.checked = false;
         toggleThemeCheckbox.title = "Toggle Dark Mode";
     }
-
-    document.getElementById("theme-stylesheet").onload = () => {
-        document.getElementById("app-root").classList.remove("d-none");
-    }
 });
+
+document.getElementById("theme-stylesheet").onload = () => {
+    document.getElementById("app-root").classList.remove("d-none");
+}
