@@ -2,7 +2,7 @@
 
 #app-root {
     transition-property: background-color !important;
-    transition: 1s;
+    transition-duration: 1s;
     background-color: themed("Background");
     font-family: themed("FontFamily");
     font-weight: themed("FontWeight");
@@ -32,6 +32,10 @@ span,
     color: themed("OnSurface");
 }
 
+section .row .card {
+    border-color: themed("OnSurface");
+}
+
 section .row .card-body {
     background-color: themed("Background");
     color: themed("Surface");
@@ -41,4 +45,9 @@ section .row .card-body .btn {
     background-color: themed("OnBackground");
     color: themed("OnSurface") !important;
     border-color: themed("OnSurface") !important;
+}
+
+section .row .card-body .btn:hover {
+    transition-duration: 300ms;
+    background-color: $Primary;
 }

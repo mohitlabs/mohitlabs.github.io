@@ -1,14 +1,20 @@
-<nav class="collapse navbar-collapse show sticky-md-top col-lg-8 mx-auto px-4 mb-4" id="navbarSupportedContent">
-    <ul class="d-flex justify-content-center nav">
-        <li class="flex-fill nav-item active"><a class="d-flex justify-content-center nav-link" href="/">HOME</a></li>
-        <li class="flex-fill nav-item"><a class="d-flex justify-content-center nav-link" href="/projects">PROJECTS</a>
+<nav class="collapse d-md-block sticky-md-top col-lg-8 mx-auto px-4 mb-4" id="navbarSupportedContent">
+    <ul class="d-flex justify-content-center nav shadow">
+        <li class="flex-fill nav-item {% if page.url == '/' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/">HOME</a></li>
+        <li class="flex-fill nav-item {% if page.url == '/projects.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/projects">PROJECTS</a>
         </li>
-        <li class="flex-fill nav-item"><a class="d-flex justify-content-center nav-link" href="/blogs">BLOGS</a></li>
-        <li class="flex-fill nav-item"><a class="d-flex justify-content-center nav-link" href="/research">RESEARCH</a>
+        <li class="flex-fill nav-item {% if page.url == '/blogs.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/blogs">BLOGS</a></li>
+        <li class="flex-fill nav-item {% if page.url == '/research.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/research">RESEARCH</a>
         </li>
-        <li class="flex-fill nav-item"><a class="d-flex justify-content-center nav-link" href="/appointment">FIX
+        <li class="flex-fill nav-item {% if page.url == '/appointment.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/appointment">FIX
                 APPOINTMENT</a></li>
-        <li class="flex-fill nav-item"><a class="d-flex justify-content-center nav-link" href="/about">ABOUT/CONTACT</a>
+        <li class="flex-fill nav-item {% if page.url == '/about.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/about">ABOUT/CONTACT</a>
         </li>
     </ul>
 </nav>
