@@ -1,7 +1,15 @@
-<header class="row mb-4">
-    <div class="col-10 order-1 col-md-2 order-md-1 d-flex align-items-center justify-content-center py-3">
-        <a href="/" class="ms-5 ms-md-0 text-decoration-none">
-            <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="MohitLabs Logo">
+<header class="navbar navbar-expand-md row mb-4">
+    <div class="col-2 order-1 d-md-none d-flex align-items-center justify-content-center py-3">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="bi bi-list"></span>
+        </button>
+    </div>
+
+    <div class="col-8 order-2 col-md-2 order-md-1 d-flex align-items-center justify-content-center py-3">
+        <a href="/" class="text-decoration-none">
+            <!-- <svg class="bi" width="40" height="32" role="img" aria-label="MohitLabs Logo">
                 <use xlink:href="/" />
             </svg> -->
             <strong>MOHITLABS</strong>
@@ -9,13 +17,13 @@
     </div>
 
     <form
-        class="col-12 order-3 col-md-8 order-md-2 flex-fill d-flex align-items-center justify-content-center input-group px-4 py-3 w-auto">
+        class="col-12 d-none col-md-8 order-md-2 flex-fill d-md-flex align-items-center justify-content-center input-group px-4 py-3 w-auto">
         <input type="search" class="form-control rounded-0" placeholder="SEARCH SOMETHING..."
             aria-label="SEARCH SOMETHING..." aria-describedby="">
         <button type="button" class="btn input-group-append border rounded-0"><i class="bi bi-search"></i></button>
     </form>
 
-    <div class="col-2 order-2 col-md-2 order-md-3 d-flex align-items-center justify-content-center py-3">
+    <div class="col-2 order-3 col-md-2 order-md-3 d-flex align-items-center justify-content-center py-3">
         <span class="toggle-theme-icon position-relative">
             <input type="checkbox" id="toggle-theme-checkbox" class="position-absolute w-100 h-100 opacity-0"
                 role="button">

@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Access toggle theme checkbox
     let toggleThemeCheckbox = document.querySelector("#toggle-theme-checkbox");
 
+    // Update the state of toggle theme button
     if (localStorage.getItem("theme") === "dark") {
         toggleThemeCheckbox.checked = true;
         toggleThemeCheckbox.title = "Toggle Light Mode";
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Remove display none class form app-root
 document.getElementById("theme-stylesheet").onload = () => {
     document.getElementById("app-root").classList.remove("d-none");
 }

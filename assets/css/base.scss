@@ -28,6 +28,14 @@ header form .btn:hover {
     background-color: $PrimaryVariant;
 }
 
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 #moon-icon {
     display: block;
 }
