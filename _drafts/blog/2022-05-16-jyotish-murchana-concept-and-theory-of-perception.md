@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Non Programmable Neural Networks For Machine Unconcious Design"
-date:   2023-06-24 14:02:35 +0530
-categories: blog misc
+title:  "Jyotish, Murchana Concept, and Theory of Perception"
+date:   2022-05-16 17:20:05 +0530
+categories: Blog Uncategorized
 ---
+Ahat Naad and Anahat Naad
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:

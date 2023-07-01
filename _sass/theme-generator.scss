@@ -17,13 +17,17 @@ span,
     color: themed("OnBackground") !important;
 }
 
+a:hover {
+    color: themed("Background") !important;
+}
+
 .form-control,
 .form-control:focus {
     color: themed("OnBackground");
     border-color: themed("OnBackground");
 }
 
-.btn {
+header .btn {
     border-color: themed("OnBackground") !important;
 }
 
@@ -32,22 +36,17 @@ span,
     color: themed("OnSurface");
 }
 
-section .row .card {
-    border-color: themed("OnSurface");
-}
-
 section .row .card-body {
     background-color: themed("Background");
     color: themed("Surface");
 }
 
-section .row .card-body .btn {
-    background-color: themed("OnBackground");
-    color: themed("OnSurface") !important;
-    border-color: themed("OnSurface") !important;
+section .row .card-img-top {
+    background-color: themed("Background");
+    color: themed("Surface");
 }
 
-section .row .card-body .btn:hover {
-    transition-duration: 300ms;
-    background-color: $Primary;
+section .row .card-footer {
+    background-color: themed("Background");
+    color: themed("Surface");
 }

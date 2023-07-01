@@ -36,6 +36,19 @@ header form .btn:hover {
     box-shadow: none;
 }
 
+.btn {
+    background-color: $Primary;
+}
+
+.btn:hover {
+    background-color: $Primary;
+    box-shadow: 0 0 17px $Primary;
+}
+
+.btn:active {
+    background-color: $PrimaryVariant !important;
+}
+
 #moon-icon {
     display: block;
 }
@@ -63,6 +76,10 @@ nav ul li:hover {
 
 nav ul .active {
     background-color: $PrimaryVariant;
+}
+
+section .row .card:hover {
+    box-shadow: 0 0 17px $Primary;
 }
 
 footer {

@@ -34,54 +34,23 @@ layout: base
         <div class="card-body">
             <h5 class="card-title">Checkout Some of My Recent Projects</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Project"] limit:3 %}
                 <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ post.thumbnail }}" class="card-img-top text-center rounded-0" alt="Thumbnail">
                         <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">SHOW MORE</a>
-                            </div>
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ post.url }}" class="justify-content-center flex-fill btn rounded-0">READ
+                                MORE</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">SHOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">SHOW MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -91,54 +60,23 @@ layout: base
         <div class="card-body">
             <h5 class="card-title">Read Some of My Recent Blogs</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Blog"] limit:3 %}
                 <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ post.thumbnail }}" class="card-img-top text-center rounded-0" alt="Thumbnail">
                         <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">READ MORE</a>
-                            </div>
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ post.url }}" class="justify-content-center flex-fill btn rounded-0">READ
+                                MORE</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">READ MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">READ MORE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -148,54 +86,23 @@ layout: base
         <div class="card-body">
             <h5 class="card-title">Study Some of My Recently Published Research Papers</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Paper"] limit:3 %}
                 <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ post.thumbnail }}" class="card-img-top text-center rounded-0" alt="Thumbnail">
                         <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">STUDY</a>
-                            </div>
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ post.url }}" class="justify-content-center flex-fill btn rounded-0">READ
+                                MORE</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">STUDY</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card rounded-0">
-                        <img src="https://source.unsplash.com/800x400/?projector,electronic,programming"
-                            class="card-img-top rounded-0" alt="Thumbnail">
-                        <div class="card-body">
-                            <h5 class="card-title">Pocket Projector</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <div class="d-flex">
-                                <a href="#" class="justify-content-center flex-fill btn rounded-0">STUDY</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

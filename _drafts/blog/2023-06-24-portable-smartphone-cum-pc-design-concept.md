@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Create a Single Page Static Web Application by using Vue and Jekyll"
-date:   2021-06-19 20:10:10 +0530
-categories: blog technical
-author: Mohit Singh
+title:  "Protable Smartphone cum PC Design Concept"
+date:   2023-06-24 20:07:25 +0530
+categories: Blog Technical
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Create a static website using jekyll"
-date:   2021-06-18 23:18:10 +0530
-categories: blog technical
-author: Mohit Singh
+title:  "Necessity of breaking the belief system of AI in Human V/S AI war"
+date:   2023-06-23 16:18:10 +0530
+categories: Blog Uncategorized
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

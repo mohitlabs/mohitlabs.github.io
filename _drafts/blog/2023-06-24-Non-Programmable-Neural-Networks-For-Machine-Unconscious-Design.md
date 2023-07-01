@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Protable Smartphone cum PC Design Concept"
-date:   2023-06-24 20:07:25 +0530
-categories: blog technical
+title:  "Non Programmable Neural Networks For Machine Unconcious Design"
+date:   2023-06-24 14:02:35 +0530
+categories: Blog Uncategorized
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
