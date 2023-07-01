@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Research & Development",
+        "description": "Description for item 1",
+        "image": "assets/img/presenting1.jpg"
+    },
+    {
+        "title": "Guidance & Support",
+        "description": "Description for item 2",
+        "image": "assets/img/presenting2.jpg"
+    }
+]
