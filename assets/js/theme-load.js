@@ -1,31 +1,29 @@
 // Get the user's theme preference from the browser's local storage
 const themePreference = localStorage.getItem("theme");
+var theme = null;
 
 // Check if user preference is stored in localStorage
 if (themePreference) {
-    setTheme(themePreference);
+    theme = themePreference;
 } else {
     // By default, use the system preference
     if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-        setTheme("light");
+        theme = "light";
     } else {
-        setTheme("dark");
+        theme = "dark";
     }
 }
+// Create a link element
+let linkElement = document.createElement("link");
 
-function setTheme(mode) {
-    // Create a link element
-    let linkElement = document.createElement("link");
+// Set the attributes of the link element
+linkElement.id = theme;
+linkElement.rel = "stylesheet";
+linkElement.href = "/assets/css/" + theme + ".css";
 
-    // Set the attributes of the link element
-    linkElement.id = "theme-stylesheet";
-    linkElement.rel = "stylesheet";
-    linkElement.href = "/assets/css/" + mode + ".css";
-
-    // Append the link element to the head section of your HTML document
-    document.head.appendChild(linkElement);
-    localStorage.setItem("theme", mode);
-}
+// Append the link element to the head section of your HTML document
+document.head.appendChild(linkElement);
+localStorage.setItem("theme", theme);
 
 // Wait for DOM content load
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let toggleThemeCheckbox = document.querySelector("#toggle-theme-checkbox");
 
     // Update the state of toggle theme button
-    if (localStorage.getItem("theme") === "dark") {
+    if (theme === "dark") {
         toggleThemeCheckbox.checked = true;
         toggleThemeCheckbox.title = "Toggle Light Mode";
     } else {
@@ -42,7 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Remove display none class form app-root
-document.getElementById("theme-stylesheet").onload = () => {
-    document.getElementById("app-root").classList.remove("d-none");
+// Wait until theme stylesheet loads
+document.getElementById(theme).onload = () => {
+    let appRoot = document.querySelector("#app-root");
+
+    // Remove bootstrap d-none class form app-root
+    if (appRoot.classList.contains("d-none")) {
+        appRoot.classList.remove("d-none");
+    }
 }

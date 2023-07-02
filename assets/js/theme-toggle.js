@@ -4,22 +4,33 @@
 window.onload = () => {
     // Listen for change in the toggle theme checkbox
     document.querySelector("#toggle-theme-checkbox").addEventListener("change", (event) => {
-        // Check the changed state
-        let theme = event.target.checked ? "dark" : "light";
+        // Store old theme in oldTheme
+        let oldTheme = event.target.checked ? "light" : "dark";
 
-        // Access theme stylesheet
-        let themeStyleSheet = document.querySelector("#theme-stylesheet");
+        // Store new theme in newTheme
+        let newTheme = event.target.checked ? "dark" : "light";
 
-        // Extract current theme stylesheet name
-        let themeStyleSheetName = (themeStyleSheet.href.substring(themeStyleSheet.href.lastIndexOf('/') + 1));
+        // Create a link element
+        let linkElement = document.createElement("link");
 
-        // Change the theme stylesheet
-        themeStyleSheet.href = themeStyleSheet.href.replace(themeStyleSheetName, theme + ".css");
+        // Set the attributes of the link element
+        linkElement.id = newTheme;
+        linkElement.rel = "stylesheet";
+        linkElement.href = "/assets/css/" + newTheme + ".css";
 
-        // Store the theme preference into the browser
-        localStorage.setItem("theme", theme);
+        // Append the link element to the head section of your HTML document
+        document.head.appendChild(linkElement);
+
+        // Store the new theme preference into the browser
+        localStorage.setItem("theme", newTheme);
 
         // Update the title of toggle theme button
-        event.target.title = "Toggle " + themeStyleSheetName.charAt(0).toUpperCase() + themeStyleSheetName.slice(1).replace(".css", "") + " Mode";
+        event.target.title = "Toggle " + oldTheme.charAt(0).toUpperCase() + oldTheme.slice(1).replace(".css", "") + " Mode";
+
+        // Wait until new theme stylesheet loads
+        document.getElementById(newTheme).onload = () => {
+            // Remove the old theme stylesheet
+            document.getElementById(oldTheme).remove();
+        }
     });
 }
