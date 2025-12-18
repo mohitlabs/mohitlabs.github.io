@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="hi">
+
+{%- include head.html -%}
+
+<body>
+
+    <main id="app-root" class="container-fluid d-none">
+
+        <!-- Header -->
+        {%- include header.html -%}
+
+        <!-- Navigation Bar -->
+        {%- include navbar.html -%}
+
+        <div class="row g-0">
+
+            <!-- Left Sidebar -->
+            <aside class="d-none d-lg-flex col-lg-2">
+            </aside>
+
+            <div class="col-lg-8 px-4">
+
+                <!-- Page Content -->
+                <div class="page-content vh-100">
+                    {{ content }}
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="d-none d-lg-flex col-lg-2">
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        {%- include footer.html -%}
+
+    </main>
+
+    {%- include script.html -%}
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+---
+---
+
+@use "themes";
+
+:root {
+	@include themes.theme-vars(dark);
+}

@@ -1,0 +1,15 @@
+<!-- Navigation Bar -->
+
+<nav class="collapse d-md-block sticky-md-top col-lg-8 mx-auto px-4 mb-4" id="navbarSupportedContent">
+    <ul class="d-flex justify-content-center nav shadow">
+        <li class="flex-fill nav-item {% if page.url == '/' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/"><b>मुखपृष्ठ</b></a></li>
+        <li class="flex-fill nav-item {% if page.url == '/blog.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/blog"><b>लेख</b></a>
+        <li class="flex-fill nav-item {% if page.url == '/appointment.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/appointment"><b>भेंट हेतु समय प्राप्त करें</b></a></li>
+        <li class="flex-fill nav-item {% if page.url == '/about.html' %}active{% endif %}"><a
+                class="d-flex justify-content-center nav-link" href="/about"><b>गुरुकुल का परिचय</b></a>
+        </li>
+    </ul>
+</nav>

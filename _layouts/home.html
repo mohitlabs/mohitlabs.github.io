@@ -1,0 +1,158 @@
+---
+layout: base
+---
+
+<!-- Home -->
+
+<div class="home">
+
+    <!-- Greet -->
+    <div class="greet d-flex justify-content-center">
+        <p>राम&nbsp;राम,&nbsp;नमस्ते!🙏</p>
+    </div>
+
+    <section class="card rounded-0 border-0 mb-4 g-4">
+        <h5 class="card-header rounded-0"><b>सूचना</b></h5>
+        <div class="card-body">
+            <h5 class="card-title">क ख ग...</h5>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Project"] limit:3 %}
+                <div class="col">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
+                            alt="Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ site.url }}{{ post.url }}"
+                                class="justify-content-center flex-fill btn rounded-0">पढें</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="card rounded-0 border-0 mb-4">
+        <h5 class="card-header rounded-0"><b>विशेष लेख</b></h5>
+        <div class="card-body">
+            <h5 class="card-title">क ख ग...</h5>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Blog"] limit:3 %}
+                <div class="col">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
+                            alt="Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ site.url }}{{ post.url }}"
+                                class="justify-content-center flex-fill btn rounded-0">पढें</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="card rounded-0 border-0">
+        <h5 class="card-header rounded-0"><b>तंत्र साधनाएँ</b></h5>
+        <div class="card-body">
+            <h5 class="card-title">क ख ग...</h5>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
+                {% for post in site.categories["Paper"] limit:3 %}
+                <div class="col">
+                    <div class="card border-0 rounded-0">
+                        <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
+                            alt="Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ post.title }}</h5>
+                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
+                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <p class="card-text text-center">{{ post.excerpt }}</p>
+                        </div>
+                        <div class="card-footer d-flex border-0 rounded-0">
+                            <a href="{{ site.url }}{{ post.url }}"
+                                class="justify-content-center flex-fill btn rounded-0">पढें</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+
+    {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+    {% else %}
+    {% assign posts = site.posts %}
+    {% endif %}
+
+
+    {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in posts -%}
+        <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+            {%- endif -%}
+        </li>
+        {%- endfor -%}
+    </ul>
+
+    {% if site.paginate %}
+    <div class="pager">
+        <ul class="pagination">
+            {%- if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{
+                    paginator.previous_page }}</a></li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">•</div>
+            </li>
+            {%- endif %}
+            <li>
+                <div class="current-page">{{ paginator.page }}</div>
+            </li>
+            {%- if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a>
+            </li>
+            {%- else %}
+            <li>
+                <div class="pager-edge">•</div>
+            </li>
+            {%- endif %}
+        </ul>
+    </div>
+    {%- endif %}
+
+    {%- endif -%} -->
+
+</div>

@@ -1,0 +1,52 @@
+// Define Theme Here
+
+@use "typography";
+@use "colors";
+
+$constants: (
+    Surface: colors.$Surface,
+    OnSurface: colors.$OnSurface,
+);
+
+$themes: (
+    dark: (
+        Primary: colors.$Primary,
+        PrimaryVariant: colors.$PrimaryVariant,
+        Background: colors.$Background,
+        OnBackground: colors.$OnBackground,
+        Surface: colors.$Surface,
+        OnSurface: colors.$OnSurface,
+        FontFamily: typography.$FontFamily,
+        FontWeight: typography.$FontWeight,
+        LineHeight: typography.$LineHeight,
+        LetterSpacing: typography.$LetterSpacing,
+        FontFeatureSettings: typography.$FontFeatureSettings,
+    ),
+    light: (
+        Primary: colors.$Primary,
+        PrimaryVariant: colors.$PrimaryVariant,
+        Background: colors.$Surface,
+        OnBackground: colors.$OnSurface,
+        Surface: colors.$Background,
+        OnSurface: colors.$OnBackground,
+        FontFamily: typography.$FontFamily,
+        FontWeight: typography.$FontWeight,
+        LineHeight: typography.$LineHeight,
+        LetterSpacing: typography.$LetterSpacing,
+        FontFeatureSettings: typography.$FontFeatureSettings,
+    ),
+);
+
+@use "sass:map";
+
+@function constants($key) {
+  @return map.get($constants, $key);
+}
+
+@mixin theme-vars($theme-name) {
+    $theme: map.get($themes, $theme-name);
+
+    @each $key, $value in $theme {
+        --#{$key}: #{$value};
+    }
+}
