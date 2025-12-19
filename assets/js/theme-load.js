@@ -19,7 +19,7 @@ let linkElement = document.createElement("link");
 // Set the attributes of the link element
 linkElement.id = theme;
 linkElement.rel = "stylesheet";
-linkElement.href = "{{ site.url }}/{{ site.baseurl }}/assets/css/" + theme + ".css";
+linkElement.href = "/assets/css/" + theme + ".css";
 
 // Append the link element to the head section of your HTML document
 document.head.appendChild(linkElement);
