@@ -1,0 +1,15 @@
+:root {
+  --Primary: #c10206;
+  --PrimaryVariant: #a50113;
+  --Background: #dfe2db;
+  --OnBackground: #fffbf2;
+  --Surface: #010a10;
+  --OnSurface: #211d21;
+  --FontFamily: Noto Sans Devanagari, sans-serif;
+  --FontWeight: 400;
+  --LineHeight: 1.75;
+  --LetterSpacing: normal;
+  --FontFeatureSettings: kern, liga;
+}
+
+/*# sourceMappingURL=light.css.map */

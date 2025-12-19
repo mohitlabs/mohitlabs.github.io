@@ -1,0 +1,15 @@
+:root {
+  --Primary: #c10206;
+  --PrimaryVariant: #a50113;
+  --Background: #010a10;
+  --OnBackground: #211d21;
+  --Surface: #dfe2db;
+  --OnSurface: #fffbf2;
+  --FontFamily: Noto Sans Devanagari, sans-serif;
+  --FontWeight: 400;
+  --LineHeight: 1.75;
+  --LetterSpacing: normal;
+  --FontFeatureSettings: kern, liga;
+}
+
+/*# sourceMappingURL=dark.css.map */
