@@ -9,8 +9,7 @@ $constants: (
 );
 
 $themes: (
-    dark: (
-        Primary: colors.$Primary,
+    dark: (Primary: colors.$Primary,
         PrimaryVariant: colors.$PrimaryVariant,
         Background: colors.$Background,
         OnBackground: colors.$OnBackground,
@@ -22,8 +21,7 @@ $themes: (
         LetterSpacing: typography.$LetterSpacing,
         FontFeatureSettings: typography.$FontFeatureSettings,
     ),
-    light: (
-        Primary: colors.$Primary,
+    light: (Primary: colors.$Primary,
         PrimaryVariant: colors.$PrimaryVariant,
         Background: colors.$Surface,
         OnBackground: colors.$OnSurface,
@@ -40,7 +38,7 @@ $themes: (
 @use "sass:map";
 
 @function constants($key) {
-  @return map.get($constants, $key);
+    @return map.get($constants, $key);
 }
 
 @mixin theme-vars($theme-name) {
@@ -50,3 +48,6 @@ $themes: (
         --#{$key}: #{$value};
     }
 }
+
+// export explicitly
+@forward "themes";
