@@ -16,7 +16,7 @@ window.onload = () => {
         // Set the attributes of the link element
         linkElement.id = newTheme;
         linkElement.rel = "stylesheet";
-        linkElement.href = "/assets/css/" + newTheme + ".css";
+        linkElement.href = "{{ site.url }}/{{ site.baseurl }}//assets/css/" + newTheme + ".css";
 
         // Append the link element to the head section of your HTML document
         document.head.appendChild(linkElement);
