@@ -1,8 +1,8 @@
 ---
 ---
 
-@use "themes";
+@import "themes";
 
 :root {
-	@include themes.theme-vars(light);
+	@include theme-vars(light);
 }
