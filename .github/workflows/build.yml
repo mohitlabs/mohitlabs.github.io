@@ -3,7 +3,7 @@ name: Build Jekyll Site
 on:
   push:
     branches:
-      - main   # ya aapka default branch
+      - master   # ya aapka default branch
 
 jobs:
   build:
