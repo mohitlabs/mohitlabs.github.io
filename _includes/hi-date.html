@@ -1,0 +1,38 @@
+{% assign months = "जनवरी,फ़रवरी,मार्च,अप्रैल,मई,जून,जुलाई,अगस्त,सितंबर,अक्टूबर,नवंबर,दिसंबर" | split: "," %}
+{% assign days = "रविवार,सोमवार,मंगलवार,बुधवार,गुरुवार,शुक्रवार,शनिवार" | split: "," %}
+
+{% assign dt = post.date | default: page.date %}
+
+{% assign m = dt | date: "%-m" | minus: 1 %}
+{% assign d = dt | date: "%w" | plus: 0 %}
+
+{% assign day = dt | date: "%d" %}
+{% assign year = dt | date: "%Y" %}
+
+{% assign day_hi = day
+| replace: "0","०"
+| replace: "1","१"
+| replace: "2","२"
+| replace: "3","३"
+| replace: "4","४"
+| replace: "5","५"
+| replace: "6","६"
+| replace: "7","७"
+| replace: "8","८"
+| replace: "9","९"
+%}
+
+{% assign year_hi = year
+| replace: "0","०"
+| replace: "1","१"
+| replace: "2","२"
+| replace: "3","३"
+| replace: "4","४"
+| replace: "5","५"
+| replace: "6","६"
+| replace: "7","७"
+| replace: "8","८"
+| replace: "9","९"
+%}
+
+{{ day_hi }} {{ months[m] }} {{ year_hi }} ({{ days[d] }})

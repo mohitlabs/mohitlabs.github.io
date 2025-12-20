@@ -43,15 +43,15 @@ layout: base
         <div class="card-body">
             <h5 class="card-title">क ख ग...</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
-                {% for post in site.categories["Blog"] limit:3 %}
+                {% for post in site.categories["blog"] limit:3 %}
                 <div class="col">
                     <div class="card border-0 rounded-0">
                         <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
-                            alt="Thumbnail">
+                            alt="thumbnail">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ post.title }}</h5>
-                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
-                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <h6 class="card-text text-center">श्रेणीयाँ: {% include hi-category.html %}</h6>
+                            <h6 class="card-text text-center">{% include hi-date.html %}</h6>
                             <p class="card-text text-center">{{ post.excerpt }}</p>
                         </div>
                         <div class="card-footer d-flex border-0 rounded-0">
