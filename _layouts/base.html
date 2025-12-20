@@ -3,41 +3,33 @@
 
 {%- include head.html -%}
 
-<body>
+<body class="container-fluid d-none">
 
-    <main id="app-root" class="container-fluid d-none">
+    <!-- Header -->
+    {%- include header.html -%}
 
-        <!-- Header -->
-        {%- include header.html -%}
+    <!-- Navigation Bar -->
+    {%- include navbar.html -%}
 
-        <!-- Navigation Bar -->
-        {%- include navbar.html -%}
+    <div class="row min-vh-100 g-0">
 
-        <div class="row g-0">
+        <!-- Left Sidebar -->
+        <aside class="d-none d-lg-flex col-lg-2">
+        </aside>
 
-            <!-- Left Sidebar -->
-            <aside class="d-none d-lg-flex col-lg-2">
-            </aside>
+        <!-- Page Content -->
+        <main class="page-content col-lg-8 px-4">
+            {{ content }}
+        </main>
 
-            <div class="col-lg-8 px-4">
+        <!-- Right Sidebar -->
+        <aside class="d-none d-lg-flex col-lg-2">
+        </aside>
 
-                <!-- Page Content -->
-                <div class="page-content vh-100">
-                    {{ content }}
-                </div>
+    </div>
 
-            </div>
-
-            <!-- Right Sidebar -->
-            <aside class="d-none d-lg-flex col-lg-2">
-            </aside>
-
-        </div>
-
-        <!-- Footer -->
-        {%- include footer.html -%}
-
-    </main>
+    <!-- Footer -->
+    {%- include footer.html -%}
 
     {%- include script.html -%}
 

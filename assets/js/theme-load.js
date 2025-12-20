@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Wait until theme stylesheet loads
 document.getElementById(theme).onload = () => {
-    let appRoot = document.querySelector("#app-root");
+    let body = document.querySelector("body");
 
     // Remove bootstrap d-none class form app-root
-    if (appRoot.classList.contains("d-none")) {
-        appRoot.classList.remove("d-none");
+    if (body.classList.contains("d-none")) {
+        body.classList.remove("d-none");
     }
 }

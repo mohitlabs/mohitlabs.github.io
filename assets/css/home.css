@@ -138,32 +138,53 @@ footer {
 }
 
 .greet p {
-	font-size: clamp(2.5rem, 5vw, 5rem);
-	border-right: 5px solid;
+	font-family: "Noto Sans Devanagari", sans-serif;
+	font-size: clamp(2rem, 6vw, 5rem);
 	color: var(--Surface);
-	width: 100%;
+
+	position: relative;
+	display: inline-block;
+
 	white-space: nowrap;
 	overflow: hidden;
-	animation: cursor 0.5s step-end infinite alternate, typing 2s steps(12) infinite alternate;
+
+	max-width: 0;
+	animation: typing 3.2s steps(30, end) infinite alternate;
 }
 
-/* Cursor Blinking Effect */
-@keyframes cursor {
-	50% {
-		border-color: transparent;
+/* Cursor */
+.greet p::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: clamp(2px, 0.4vw, 4px);
+	background: currentColor;
+	animation: blink 0.8s step-end infinite;
+}
+
+/* Mobile Optimization */
+@media (max-width: 640px) {
+	.greet p {
+		animation-duration: 2.6s;
 	}
 }
 
 /* Typing Effect */
 @keyframes typing {
-
-	0%,
-	30% {
-		width: 0ch;
+	from {
+		max-width: 0;
 	}
 
-	70%,
-	100% {
-		width: 50%;
+	to {
+		max-width: 100%;
+	}
+}
+
+/* Cursor Blinking Effect */
+@keyframes blink {
+	50% {
+		opacity: 0;
 	}
 }
