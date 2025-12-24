@@ -2,15 +2,12 @@
 layout: base
 ---
 
-<!-- Post -->
-<article class="post">
+<!-- Post Layout -->
 
-    <header class="post-header">
-        <h1 class="post-title">{{ page.title | escape }}</h1>
-    </header>
-
-    <div class="post-content">
+<article class="post text-center card rounded-0 border-0 mb-4">
+    <h5 class="card-header rounded-0">{{ page.title | escape }}</h5>
+    <div class="card-body">
         {{ content }}
     </div>
-
+    <div class="card-footer border-0 rounded-0">२ दिन पहले</div>
 </article>

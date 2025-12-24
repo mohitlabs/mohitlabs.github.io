@@ -14,7 +14,8 @@ a,
 i,
 span,
 .form-control::placeholder,
-.card-header {
+.card-header,
+.card-footer {
 	color: #fffbf2 !important;
 }
 
@@ -33,25 +34,26 @@ a:hover {
 	color: var(--OnSurface);
 }
 
-section .card-header {
+.card-header,
+.card-footer {
 	background-color: var(--Primary);
 }
 
-section .row .card:hover {
+.card .row .card:hover {
 	box-shadow: 0 0 17px var(--Primary);
 }
 
-section .row .card-body {
+.card .row .card-body {
 	background-color: var(--Background);
 	color: var(--Surface);
 }
 
-section .row .card-img-top {
+.card .row .card-img-top {
 	background-color: var(--Background);
 	color: var(--Surface);
 }
 
-section .row .card-footer {
+.card .row .card-footer {
 	background-color: var(--Background);
 	color: var(--Surface);
 }
@@ -130,28 +132,27 @@ nav ul .active {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: 70vh;
-  object-fit: cover;
+	width: 100%;
+	height: 70vh;
+	object-fit: cover;
 }
 
 .carousel-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.7)
-  );
-  z-index: 1;
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle,
+			rgba(0, 0, 0, 0.25),
+			rgba(0, 0, 0, 0.7));
+	z-index: 1;
 }
 
 .carousel-caption {
-  z-index: 2;
+	z-index: 2;
 }
 
-.carousel-caption h5, p {
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+.carousel-caption h5,
+p {
+	text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
 }
 
 footer {
@@ -173,19 +174,39 @@ footer {
 	animation: typing 2.5s steps(30, end) infinite alternate;
 }
 
+/* Node Border */
 pre.mermaid .node rect {
-  fill: transparent !important;
-  stroke: var(--Surface) !important;
-  stroke-width: 2px;
+	fill: transparent !important;
+	stroke: var(--Surface) !important;
+	stroke-width: 2px !important;
+	rx: 30;
+	ry: 30;
 }
 
-pre.mermaid .node text {
-  fill: blue !important;
-  font-weight: 500;
+/* Node Text */
+pre.mermaid .node p {
+	color: var(--Surface) !important;
+	font-size: larger;
 }
 
-pre.mermaid .edgePath path {
-  stroke: red !important;
+/* Edge */
+pre.mermaid path.flowchart-link {
+	stroke: var(--Surface) !important;
+	stroke-width: 2px !important;
+}
+
+/* Arrow Marker Path */
+pre.mermaid marker {
+	overflow: visible !important;
+}
+
+/* Arrow Marker */
+pre.mermaid marker path {
+	fill: var(--Surface) !important;
+	stroke: var(--Surface) !important;
+	transform-box: fill-box;
+	transform-origin: center;
+	transform: matrix(1.5, 0, 0, 1.5, -5, 0);
 }
 
 /* Cursor */
@@ -209,11 +230,14 @@ pre.mermaid .edgePath path {
 
 /* Typing Effect */
 @keyframes typing {
-	0%, 20% {
+
+	0%,
+	20% {
 		max-width: 0;
 	}
 
-	80%, 100% {
+	80%,
+	100% {
 		max-width: 100%;
 	}
 }
