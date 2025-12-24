@@ -7,24 +7,27 @@ layout: base
 <div class="home">
 
     <!-- Greet -->
-    <div class="greet d-flex justify-content-center">
-        <p>राम&nbsp;राम,&nbsp;नमस्ते!🙏</p>
+    <div class="greet d-flex justify-content-center mb-4">
+        <p class="mb-0">राम&nbsp;राम,&nbsp;नमस्ते!🙏</p>
     </div>
+
+    <!-- Carousel -->
+    {%- include carousel.html -%}
 
     <section class="card rounded-0 border-0 mb-4">
         <h5 class="card-header rounded-0"><b>सूचना</b></h5>
         <div class="card-body">
             <h5 class="card-title">क ख ग...</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
-                {% for post in site.categories["Project"] limit:3 %}
+                {% for post in site.categories["philosophy"] limit:3 %}
                 <div class="col">
                     <div class="card border-0 rounded-0">
                         <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
                             alt="Thumbnail">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ post.title }}</h5>
-                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
-                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <h6 class="card-text text-center">श्रेणियाँ: {% include hi-category.html %}</h6>
+                            <h6 class="card-text text-center">{% include hi-date.html %}</h6>
                             <p class="card-text text-center">{{ post.excerpt }}</p>
                         </div>
                         <div class="card-footer d-flex border-0 rounded-0">
@@ -50,7 +53,7 @@ layout: base
                             alt="thumbnail">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ post.title }}</h5>
-                            <h6 class="card-text text-center">श्रेणीयाँ: {% include hi-category.html %}</h6>
+                            <h6 class="card-text text-center">श्रेणियाँ: {% include hi-category.html %}</h6>
                             <h6 class="card-text text-center">{% include hi-date.html %}</h6>
                             <p class="card-text text-center">{{ post.excerpt }}</p>
                         </div>
@@ -65,20 +68,20 @@ layout: base
         </div>
     </section>
 
-    <section class="card rounded-0 border-0">
-        <h5 class="card-header rounded-0"><b>तंत्र साधनाएँ</b></h5>
+    <section class="card rounded-0 border-0 mb-4">
+        <h5 class="card-header rounded-0"><b>साधना</b></h5>
         <div class="card-body">
             <h5 class="card-title">क ख ग...</h5>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-gap-3">
-                {% for post in site.categories["Paper"] limit:3 %}
+                {% for post in site.categories["sadhna"] limit:3 %}
                 <div class="col">
                     <div class="card border-0 rounded-0">
                         <img src="{{ site.url }}/{{ post.thumbnail }}" class="card-img-top text-center rounded-0"
                             alt="Thumbnail">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ post.title }}</h5>
-                            <h5 class="card-text text-center">{{ post.categories | join: ", " }}</h5>
-                            <h5 class="card-text text-center">{{ post.date | date: "%b %d, %Y (%A)" }}</h5>
+                            <h6 class="card-text text-center">श्रेणियाँ: {% include hi-category.html %}</h6>
+                            <h6 class="card-text text-center">{% include hi-date.html %}</h6>
                             <p class="card-text text-center">{{ post.excerpt }}</p>
                         </div>
                         <div class="card-footer d-flex border-0 rounded-0">

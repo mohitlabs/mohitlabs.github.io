@@ -28,10 +28,6 @@ a:hover {
 	border-color: var(--OnBackground);
 }
 
-header .btn {
-	border-color: var(--OnBackground) !important;
-}
-
 .card-body {
 	background-color: var(--OnBackground);
 	color: var(--OnSurface);
@@ -133,6 +129,31 @@ nav ul .active {
 	background-color: var(--PrimaryVariant);
 }
 
+.carousel-item img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.7)
+  );
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+.carousel-caption h5, p {
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+}
+
 footer {
 	background-color: var(--Primary);
 }
@@ -149,7 +170,22 @@ footer {
 	overflow: hidden;
 
 	max-width: 0;
-	animation: typing 3.2s steps(30, end) infinite alternate;
+	animation: typing 2.5s steps(30, end) infinite alternate;
+}
+
+pre.mermaid .node rect {
+  fill: transparent !important;
+  stroke: var(--Surface) !important;
+  stroke-width: 2px;
+}
+
+pre.mermaid .node text {
+  fill: blue !important;
+  font-weight: 500;
+}
+
+pre.mermaid .edgePath path {
+  stroke: red !important;
 }
 
 /* Cursor */
@@ -161,23 +197,23 @@ footer {
 	height: 100%;
 	width: clamp(2px, 0.4vw, 4px);
 	background: currentColor;
-	animation: blink 0.8s step-end infinite;
+	animation: blink 1s step-end infinite;
 }
 
 /* Mobile Optimization */
 @media (max-width: 640px) {
 	.greet p {
-		animation-duration: 2.6s;
+		animation-duration: 2.5s;
 	}
 }
 
 /* Typing Effect */
 @keyframes typing {
-	from {
+	0%, 20% {
 		max-width: 0;
 	}
 
-	to {
+	80%, 100% {
 		max-width: 100%;
 	}
 }
